@@ -13,6 +13,7 @@ public class GameSetup : MonoBehaviour
     {
         CreatPlayer();
     }
+    
 
     private void CreatPlayer()
     {

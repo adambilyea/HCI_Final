@@ -7,21 +7,54 @@ public class Move : MonoBehaviour
 {   
     private PhotonView myPV;
     private GameObject player;
-    public float speed = 0;
+    public float speed = 1.0f;
+    public string myName = "Test";
+    private object[] variables;
+
+
     // Start is called before the first frame update
     void Start()
     {
+        variables = new object[2];
+    
+        variables[0] = 0;
+        variables[1] = "Test";
+
         player = this.gameObject;
         myPV = GetComponent<PhotonView>();
     }
 
+    
+    [PunRPC] void SetVariables(object[] newVariables)
+    {   
+        GetVariables(newVariables);
+    }
+
+    
+     void GetVariables(object[] newVariables)
+    {
+        speed = (float)(float) newVariables[0];
+        myName = (string)(string) newVariables[1];
+    }
+
+
     void Update()
     {
+        if(!myPV.IsMine)
+        {
+            speed = 10f;
+            myName = "Adam";
+
+            variables[0] = speed;
+            variables[1] = myName;
+            
+            myPV.RPC("SetVariables", RpcTarget.OthersBuffered, variables);
+        }
+
         if(myPV.IsMine)
         {
             movePos();
         }
-
         
     }
 
