@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using Photon.Pun;
+using UnityEngine.UI;
 
 
 
 public class GameSetup : MonoBehaviour
 {
+    public InputField input;
     // Start is called before the first frame update
     void Start()
     {

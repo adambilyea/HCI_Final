@@ -11,10 +11,13 @@ public class Move : MonoBehaviour
     public string myName = "Test";
     private object[] variables;
 
+    private GameSetup game;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        game = FindObjectOfType<GameSetup>();
         variables = new object[2];
     
         variables[0] = 0;
@@ -35,6 +38,8 @@ public class Move : MonoBehaviour
     {
         speed = (float)(float) newVariables[0];
         myName = (string)(string) newVariables[1];
+
+        Debug.Log((float)(float) newVariables[0]);
     }
 
 
@@ -42,7 +47,10 @@ public class Move : MonoBehaviour
     {
         if(!myPV.IsMine)
         {
-            speed = 10f;
+            speed = float.Parse(game.input.text);
+
+            //speed = 10f;
+
             myName = "Adam";
 
             variables[0] = speed;
