@@ -11,8 +11,10 @@ public class Move : MonoBehaviour
     public string myName = "Test";
     private object[] variables;
 
-    private GameSetup game;
 
+    private GameSetup game;
+    public Camera researchCam;
+    public Camera testerCam;
     private GameObject tester;
 
 
@@ -25,6 +27,17 @@ public class Move : MonoBehaviour
     
         variables[0] = 0;
         variables[1] = "Test";
+
+        if (QuickStartRoomController.option == 1)
+        {
+            researchCam.enabled = true;
+            testerCam.enabled = false;
+        }
+        if (QuickStartRoomController.option == 2)
+        {
+            researchCam.enabled = false;
+            testerCam.enabled = true;
+        }        
 
         player = this.gameObject;
         myPV = GetComponent<PhotonView>();
@@ -41,6 +54,7 @@ public class Move : MonoBehaviour
     {
         speed = (float)(float) newVariables[0];
         myName = (string)(string) newVariables[1];
+        
 
         Debug.Log((float)(float) newVariables[0]);
     }

@@ -79,19 +79,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11802}
     - Class: 114
-      Script: {instanceID: 11838}
+      Script: {instanceID: 11836}
     - Class: 114
-      Script: {instanceID: 12102}
+      Script: {instanceID: 12100}
     - Class: 114
-      Script: {instanceID: 12628}
+      Script: {instanceID: 12626}
     - Class: 114
-      Script: {instanceID: 12678}
+      Script: {instanceID: 12676}
     - Class: 114
-      Script: {instanceID: 13434}
+      Script: {instanceID: 13432}
     - Class: 114
-      Script: {instanceID: 13816}
+      Script: {instanceID: 13814}
     - Class: 114
-      Script: {instanceID: 14284}
+      Script: {instanceID: 14282}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -154,53 +154,53 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11808}
     - Class: 114
-      Script: {instanceID: 11838}
+      Script: {instanceID: 11836}
     - Class: 114
-      Script: {instanceID: 11998}
+      Script: {instanceID: 11996}
     - Class: 114
-      Script: {instanceID: 12016}
+      Script: {instanceID: 12014}
     - Class: 114
-      Script: {instanceID: 12094}
+      Script: {instanceID: 12092}
     - Class: 114
-      Script: {instanceID: 12102}
+      Script: {instanceID: 12100}
     - Class: 114
-      Script: {instanceID: 12174}
+      Script: {instanceID: 12172}
     - Class: 114
-      Script: {instanceID: 12628}
+      Script: {instanceID: 12626}
     - Class: 114
-      Script: {instanceID: 12712}
+      Script: {instanceID: 12710}
     - Class: 114
-      Script: {instanceID: 12950}
+      Script: {instanceID: 12948}
     - Class: 114
-      Script: {instanceID: 13024}
+      Script: {instanceID: 13022}
     - Class: 114
-      Script: {instanceID: 13242}
+      Script: {instanceID: 13240}
     - Class: 114
-      Script: {instanceID: 13322}
+      Script: {instanceID: 13320}
     - Class: 114
-      Script: {instanceID: 13410}
+      Script: {instanceID: 13408}
     - Class: 114
-      Script: {instanceID: 13422}
+      Script: {instanceID: 13420}
     - Class: 114
-      Script: {instanceID: 13648}
+      Script: {instanceID: 13646}
     - Class: 114
-      Script: {instanceID: 13670}
+      Script: {instanceID: 13668}
     - Class: 114
-      Script: {instanceID: 13680}
+      Script: {instanceID: 13678}
     - Class: 114
-      Script: {instanceID: 13698}
+      Script: {instanceID: 13696}
     - Class: 114
-      Script: {instanceID: 13816}
+      Script: {instanceID: 13814}
     - Class: 114
-      Script: {instanceID: 13940}
+      Script: {instanceID: 13938}
     - Class: 114
-      Script: {instanceID: 13952}
+      Script: {instanceID: 13950}
     - Class: 114
-      Script: {instanceID: 14192}
+      Script: {instanceID: 14190}
     - Class: 114
-      Script: {instanceID: 14284}
+      Script: {instanceID: 14282}
     - Class: 114
-      Script: {instanceID: 14320}
+      Script: {instanceID: 14318}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -446,7 +446,7 @@ ScriptsOnlyBuild:
     className: DemoHubManager
   - hash:
       serializedVersion: 2
-      Hash: cb9b758763b31f13158b18a4432e9926
+      Hash: 36fa5d0ad24e521675e0f50fbe4ad59c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Move
@@ -1576,4 +1576,5 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
   - Assets/Scenes/New Scene.unity
-  playerPath: D:/Unity Projects/HCI_Build/HCI Final.exe
+  playerPath: C:/Users/AdamBilyea/Documents/Unity Stuff/HCI_Final/HCI_Final/HCI Final/Build/HCI
+    Final.exe
