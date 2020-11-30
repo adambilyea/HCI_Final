@@ -9,7 +9,9 @@ using UnityEngine.UI;
 
 public class GameSetup : MonoBehaviour
 {
-    public InputField input;
+    public Text input;
+
+    public InputField field;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,11 +23,12 @@ public class GameSetup : MonoBehaviour
     {
         if(PhotonNetwork.IsMasterClient)
         {
-            PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "Player"), new Vector3(0,1,0), Quaternion.identity);
+            PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "Researcher"), new Vector3(0,1,0), Quaternion.identity);
         }
         else
         {
             PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "Player"), new Vector3(5,1,5), Quaternion.identity);
+            field.gameObject.SetActive(false);
         }
     }
 }

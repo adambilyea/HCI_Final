@@ -13,10 +13,13 @@ public class Move : MonoBehaviour
 
     private GameSetup game;
 
+    private GameObject tester;
+
 
     // Start is called before the first frame update
     void Start()
     {
+        tester = this.gameObject;
         game = FindObjectOfType<GameSetup>();
         variables = new object[2];
     
@@ -28,13 +31,13 @@ public class Move : MonoBehaviour
     }
 
     
-    [PunRPC] void SetVariables(object[] newVariables)
-    {   
-        GetVariables(newVariables);
-    }
+    // [PunRPC] void SetVariables(object[] newVariables)
+    // {   
+    //     GetVariables(newVariables);
+    // }
 
     
-     void GetVariables(object[] newVariables)
+    public void GetVariables(object[] newVariables)
     {
         speed = (float)(float) newVariables[0];
         myName = (string)(string) newVariables[1];
@@ -45,19 +48,19 @@ public class Move : MonoBehaviour
 
     void Update()
     {
-        if(!myPV.IsMine)
-        {
-            speed = float.Parse(game.input.text);
+        // if(!myPV.IsMine)
+        // {
+        //     speed = float.Parse(game.input.text);
 
-            //speed = 10f;
+        //     //speed = 10f;
 
-            myName = "Adam";
+        //     myName = "Adam";
 
-            variables[0] = speed;
-            variables[1] = myName;
+        //     variables[0] = speed;
+        //     variables[1] = myName;
             
-            myPV.RPC("SetVariables", RpcTarget.OthersBuffered, variables);
-        }
+        //     myPV.RPC("SetVariables", RpcTarget.OthersBuffered, variables);
+        // }
 
         if(myPV.IsMine)
         {
