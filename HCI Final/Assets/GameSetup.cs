@@ -5,8 +5,6 @@ using System.IO;
 using Photon.Pun;
 using UnityEngine.UI;
 
-
-
 public class GameSetup : MonoBehaviour
 {
     public Text input;
@@ -16,15 +14,16 @@ public class GameSetup : MonoBehaviour
     void Start()
     {
         CreatPlayer();
+        Debug.Log(QuickStartRoomController.option);
     }
     
     private void CreatPlayer()
     {
-        if(PhotonNetwork.IsMasterClient)
+        if(QuickStartRoomController.option == 1)
         {
             PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "Researcher"), new Vector3(0,1,0), Quaternion.identity);
         }
-        else
+        else if(QuickStartRoomController.option == 2)
         {
             PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "Player"), new Vector3(5,1,5), Quaternion.identity);
             field.gameObject.SetActive(false);

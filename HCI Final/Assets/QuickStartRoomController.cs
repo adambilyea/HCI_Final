@@ -3,6 +3,7 @@ using Photon.Pun;
 
 public class QuickStartRoomController : MonoBehaviourPunCallbacks
 {
+    static public int option = 0;
 
     [SerializeField]
     private int multiplayerSceneIndex;
@@ -31,4 +32,14 @@ public class QuickStartRoomController : MonoBehaviourPunCallbacks
             PhotonNetwork.LoadLevel(multiplayerSceneIndex);
         }
     }
+
+    public void Researcher()
+    {
+        option = 1;
+    }
+    public void Tester()
+    {
+        option = 2;
+    }
+
 }
