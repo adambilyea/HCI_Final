@@ -18,7 +18,6 @@ public class GameSetup : MonoBehaviour
         CreatPlayer();
     }
     
-
     private void CreatPlayer()
     {
         if(PhotonNetwork.IsMasterClient)
