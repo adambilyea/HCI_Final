@@ -8,6 +8,8 @@ using UnityEngine.UI;
 public class GameSetup : MonoBehaviour
 {
     public Text input;
+    public Canvas Researcher;
+
 
     public InputField field;
     // Start is called before the first frame update
@@ -27,6 +29,7 @@ public class GameSetup : MonoBehaviour
         {
             PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "Player"), new Vector3(5,1,5), Quaternion.identity);
             field.gameObject.SetActive(false);
+            Researcher.enabled = false;
         }
     }
 }

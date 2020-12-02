@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using Photon.Pun;
 
 public class QuickStartRoomController : MonoBehaviourPunCallbacks
 {
     static public int option = 0;
-
+    public Text choosen;
     [SerializeField]
     private int multiplayerSceneIndex;
 
@@ -36,10 +37,13 @@ public class QuickStartRoomController : MonoBehaviourPunCallbacks
     public void Researcher()
     {
         option = 1;
+        choosen.text = "Researcher";
     }
+
     public void Tester()
     {
         option = 2;
+        choosen.text = "Tester";
     }
 
 }

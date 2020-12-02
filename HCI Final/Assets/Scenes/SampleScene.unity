@@ -614,6 +614,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a7a9b3df22322547b4c0aabc0dde9d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  choosen: {fileID: 1069914029}
   multiplayerSceneIndex: 1
 --- !u!4 &636513358
 Transform:
@@ -1166,7 +1167,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ///////////////////
+  m_Text: null
 --- !u!222 &1069914030
 CanvasRenderer:
   m_ObjectHideFlags: 0
