@@ -6,33 +6,38 @@ public class Frogger : MonoBehaviour
 {
     public GameObject car;
     public Transform loc1;
+    public Transform loc2;
+
+    private int randn1;
+    private int randn2;
+
     private float timer = 0;
     // Start is called before the first frame update
     void Start()
     {
+        randn1 = Random.Range(200, 1000);
+        randn2 = Random.Range(200, 1000);
+
         //private WaitForSeconds asd = 10f;
     }
 
-    IEnumerator CarSpawner()
-    {
-
-        Debug.Log("aads");
-        yield return new WaitForSeconds(5f);
-
-    }
 
     // Update is called once per frame
 
     void Update()
     {
         timer++;
-        if (timer >= Random.Range(200,400))
+        if (timer >= randn1)
         {
         Instantiate(car, loc1);
-            timer = 0;
+            randn1 = randn1 + Random.Range(200, 1000);
         }
-        //CarSpawner();
-        //StartCoroutine("CarSpawner"); 
+        if (timer >= randn2)
+        {
+            Instantiate(car, loc2);
+            randn2 = randn2 + Random.Range(200, 1000);
+        }
+ 
 
     }
 }
