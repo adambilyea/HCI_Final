@@ -16,9 +16,21 @@ public class car : MonoBehaviour
         if (gameObject.transform.eulerAngles.y == 270)
             gameObject.transform.position = new Vector3(gameObject.transform.position.x - 0.1f, gameObject.transform.position.y, gameObject.transform.position.z);
         else if (gameObject.transform.eulerAngles.y == 90)
-        {
-            Debug.Log(gameObject.transform.eulerAngles.y);
             gameObject.transform.position = new Vector3(gameObject.transform.position.x + 0.1f, gameObject.transform.position.y, gameObject.transform.position.z);
-        }
+        
+
+        //OnCollisionEnter();
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+      
+        
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Tunnel")
+            Destroy(gameObject);
     }
 }

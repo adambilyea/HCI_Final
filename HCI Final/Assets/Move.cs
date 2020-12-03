@@ -102,4 +102,16 @@ public class Move : MonoBehaviour
             player.transform.position = new Vector3(player.transform.position.x + (0.1f * speed), player.transform.position.y, player.transform.position.z);
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Car")
+        {
+            gameObject.transform.SetPositionAndRotation(new Vector3(0, 0, 0), Quaternion.identity);
+        }
+        if (other.gameObject.tag == "Goal")
+        {
+            gameObject.transform.SetPositionAndRotation(new Vector3(0, 0, 0), Quaternion.identity);
+        }
+    }
 }
