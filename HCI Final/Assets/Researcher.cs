@@ -7,6 +7,7 @@ using Photon.Pun;
 public class Researcher : MonoBehaviour
 {
     public float speed = 1.0f;
+    private float carSpeed = 20f;
     public string myName = "Test";
 
     private PhotonView myPV;
@@ -16,6 +17,7 @@ public class Researcher : MonoBehaviour
     private Move move;
 
     private Text input;
+    private Text carSpeedInput;
 
     private bool playerJoined = false;
     // Start is called before the first frame update
@@ -25,10 +27,12 @@ public class Researcher : MonoBehaviour
         myPV = GetComponent<PhotonView>();
         game = FindObjectOfType<GameSetup>();
         input = game.input;
+        carSpeedInput = game.carSpeedInput;
 
-        variables = new object[2];
+        variables = new object[3];
         variables[0] = 0;
         variables[1] = "Researcher";
+        variables[2] = carSpeed;
     }
     [PunRPC] void SetVariables(object[] newVariables)
     {   
@@ -49,11 +53,13 @@ public class Researcher : MonoBehaviour
         {
             //Debug.Log(float.Parse(input.text));
             speed = float.Parse(input.text);
+            carSpeed = float.Parse(carSpeedInput.text);
             //speed = 10f;
             myName = "Adam";
 
             variables[0] = speed;
             variables[1] = myName;
+            variables[2] = carSpeed;
             
             myPV.RPC("SetVariables", RpcTarget.OthersBuffered, variables);
             Debug.Log("values sent");

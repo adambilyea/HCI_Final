@@ -498,7 +498,7 @@ ScriptsOnlyBuild:
     className: DemoHubManager
   - hash:
       serializedVersion: 2
-      Hash: 36fa5d0ad24e521675e0f50fbe4ad59c
+      Hash: 78729742566a7f3616ce10b687cfc78a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Move
@@ -780,7 +780,7 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAsset
   - hash:
       serializedVersion: 2
-      Hash: 7b5fca4c5af6810b7ddefe97d291d77c
+      Hash: b47eaca17e6db639434d1d47d6e579ee
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameSetup

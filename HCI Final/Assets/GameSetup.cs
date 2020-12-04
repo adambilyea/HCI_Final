@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class GameSetup : MonoBehaviour
 {
     public Text input;
+    public Text carSpeedInput;
     public Canvas Researcher;
 
     //Car Variables

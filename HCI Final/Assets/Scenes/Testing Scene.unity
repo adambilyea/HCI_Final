@@ -647,6 +647,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   input: {fileID: 1471700394}
+  carSpeedInput: {fileID: 990933832}
   Researcher: {fileID: 154218363}
   car: {fileID: 2351991089878818295, guid: 9b7148b72b29c0f45850611d324dd139, type: 3}
   loc1: {fileID: 2080795706}
@@ -2025,7 +2026,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1319875907}
   m_Direction: 0
   m_Value: 1
-  m_Size: 0.99999994
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -6790,8 +6791,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 257897567}
   m_HandleRect: {fileID: 257897566}
   m_Direction: 2
-  m_Value: 0.9999999
-  m_Size: 0.3735993
+  m_Value: 1
+  m_Size: 0.37359932
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

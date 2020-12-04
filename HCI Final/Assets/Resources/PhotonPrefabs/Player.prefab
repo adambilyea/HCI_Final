@@ -178,6 +178,7 @@ MonoBehaviour:
   myName: Test
   researchCam: {fileID: 2442462020067425289}
   testerCam: {fileID: 139560534222337410}
+  carSpeed: 0
 --- !u!114 &4139491974724725842
 MonoBehaviour:
   m_ObjectHideFlags: 0

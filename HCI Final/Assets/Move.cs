@@ -17,7 +17,8 @@ public class Move : MonoBehaviour
     public Camera testerCam;
     private GameObject tester;
 
-
+    private car car;
+    public float carSpeed;
     private int randn1;
     private int randn2;
     private int randn3;
@@ -37,10 +38,12 @@ public class Move : MonoBehaviour
     {
         tester = this.gameObject;
         game = FindObjectOfType<GameSetup>();
-        variables = new object[2];
+        car = FindObjectOfType<car>();
+        variables = new object[3];
     
         variables[0] = 0;
         variables[1] = "Test";
+        variables[2] = 0.0f;
 
         if (QuickStartRoomController.option == 1)
         {
@@ -77,9 +80,7 @@ public class Move : MonoBehaviour
     {
         speed = (float)(float) newVariables[0];
         myName = (string)(string) newVariables[1];
-        
-
-        Debug.Log((float)(float) newVariables[0]);
+        carSpeed = (float)(float) newVariables[2];  
     }
 
 
