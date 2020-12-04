@@ -56,7 +56,7 @@ public class Move : MonoBehaviour
         player = this.gameObject;
         myPV = GetComponent<PhotonView>();
 
-         randn1 = Random.Range(200, 1000);
+        randn1 = Random.Range(200, 1000);
         randn2 = Random.Range(200, 1000);
         randn3 = Random.Range(200, 900);
         randn4 = Random.Range(200, 900);
@@ -85,47 +85,6 @@ public class Move : MonoBehaviour
 
     void Update()
     {
-         timer++;
-        if (timer >= randn1)
-        {
-        Instantiate(game.car, game.loc1);
-            randn1 = randn1 + Random.Range(200, 1000);
-        }
-        if (timer >= randn2)
-        {
-            Instantiate(game.car, game.loc2);
-            randn2 = randn2 + Random.Range(200, 1000);
-        }
-        if (timer >= randn3)
-        {
-            Instantiate(game.car, game.loc3);
-            randn3 = randn3 + Random.Range(200, 900);
-        }
-        if (timer >= randn4)
-        {
-            Instantiate(game.car, game.loc4);
-            randn4 = randn4 + Random.Range(200, 900);
-        }
-        if (timer >= randn5)
-        {
-            Instantiate(game.car, game.loc5);
-            randn5 = randn5 + Random.Range(200, 800);
-        }
-        if (timer >= randn6)
-        {
-            Instantiate(game.car, game.loc6);
-            randn6 = randn6 + Random.Range(200, 800);
-        }
-        if (timer >= randn7)
-        {
-            Instantiate(game.car, game.loc7);
-            randn7 = randn7 + Random.Range(100, 800);
-        }
-        if (timer >= randn8)
-        {
-            Instantiate(game.car, game.loc8);
-            randn8 = randn8 + Random.Range(100, 800);
-        }
         if(myPV.IsMine)
         {
             movePos();

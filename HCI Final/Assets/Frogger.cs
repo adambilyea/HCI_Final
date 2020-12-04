@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
+using System.IO;
 
 public class Frogger : MonoBehaviour
 {
@@ -44,47 +46,49 @@ public class Frogger : MonoBehaviour
 
     void Update()
     {
-        // timer++;
-        // if (timer >= randn1)
-        // {
-        // Instantiate(car, loc1);
-        //     randn1 = randn1 + Random.Range(200, 1000);
-        // }
-        // if (timer >= randn2)
-        // {
-        //     Instantiate(car, loc2);
-        //     randn2 = randn2 + Random.Range(200, 1000);
-        // }
-        // if (timer >= randn3)
-        // {
-        //     Instantiate(car, loc3);
-        //     randn3 = randn3 + Random.Range(200, 900);
-        // }
-        // if (timer >= randn4)
-        // {
-        //     Instantiate(car, loc4);
-        //     randn4 = randn4 + Random.Range(200, 900);
-        // }
-        // if (timer >= randn5)
-        // {
-        //     Instantiate(car, loc5);
-        //     randn5 = randn5 + Random.Range(200, 800);
-        // }
-        // if (timer >= randn6)
-        // {
-        //     Instantiate(car, loc6);
-        //     randn6 = randn6 + Random.Range(200, 800);
-        // }
-        // if (timer >= randn7)
-        // {
-        //     Instantiate(car, loc7);
-        //     randn7 = randn7 + Random.Range(100, 800);
-        // }
-        // if (timer >= randn8)
-        // {
-        //     Instantiate(car, loc8);
-        //     randn8 = randn8 + Random.Range(100, 800);
-        // }
-
+        if(QuickStartRoomController.option == 2)
+        {
+        timer++;
+        if (timer >= randn1)
+        {
+        PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "Car"), loc1.position, loc1.rotation);
+            randn1 = randn1 + Random.Range(200, 1000);
+        }
+        if (timer >= randn2)
+        {
+            //PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "Car"), loc2.position, loc2.rotation);
+            randn2 = randn2 + Random.Range(200, 1000);
+        }
+        if (timer >= randn3)
+        {
+            //PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "Car"), loc3.position, loc3.rotation);
+            randn3 = randn3 + Random.Range(200, 900);
+        }
+        if (timer >= randn4)
+        {
+            //PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "Car"), loc4.position, loc4.rotation);
+            randn4 = randn4 + Random.Range(200, 900);
+        }
+        if (timer >= randn5)
+        {
+            //PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "Car"), loc5.position, loc5.rotation);
+            randn5 = randn5 + Random.Range(200, 800);
+        }
+        if (timer >= randn6)
+        {
+           //PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "Car"), loc6.position, loc6.rotation);
+            randn6 = randn6 + Random.Range(200, 800);
+        }
+        if (timer >= randn7)
+        {
+            //PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "Car"), loc7.position, loc7.rotation);
+            randn7 = randn7 + Random.Range(100, 800);
+        }
+        if (timer >= randn8)
+        {
+           //PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "Car"), loc8.position, loc8.rotation);
+            randn8 = randn8 + Random.Range(100, 800);
+        }
+        }
     }
 }
