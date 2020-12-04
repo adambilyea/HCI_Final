@@ -14,9 +14,9 @@ public class car : MonoBehaviour
     void Update()
     {
         if (gameObject.transform.eulerAngles.y == 270)
-            gameObject.transform.position = new Vector3(gameObject.transform.position.x - 0.1f, gameObject.transform.position.y, gameObject.transform.position.z);
+            gameObject.transform.position = new Vector3(gameObject.transform.position.x - (20f * Time.deltaTime), gameObject.transform.position.y, gameObject.transform.position.z);
         else if (gameObject.transform.eulerAngles.y == 90)
-            gameObject.transform.position = new Vector3(gameObject.transform.position.x + 0.1f, gameObject.transform.position.y, gameObject.transform.position.z);
+            gameObject.transform.position = new Vector3(gameObject.transform.position.x + (20f * Time.deltaTime), gameObject.transform.position.y, gameObject.transform.position.z);
         
 
         //OnCollisionEnter();
