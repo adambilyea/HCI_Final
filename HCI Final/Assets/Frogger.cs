@@ -44,47 +44,47 @@ public class Frogger : MonoBehaviour
 
     void Update()
     {
-        timer++;
-        if (timer >= randn1)
-        {
-        Instantiate(car, loc1);
-            randn1 = randn1 + Random.Range(200, 1000);
-        }
-        if (timer >= randn2)
-        {
-            Instantiate(car, loc2);
-            randn2 = randn2 + Random.Range(200, 1000);
-        }
-        if (timer >= randn3)
-        {
-            Instantiate(car, loc3);
-            randn3 = randn3 + Random.Range(200, 900);
-        }
-        if (timer >= randn4)
-        {
-            Instantiate(car, loc4);
-            randn4 = randn4 + Random.Range(200, 900);
-        }
-        if (timer >= randn5)
-        {
-            Instantiate(car, loc5);
-            randn5 = randn5 + Random.Range(200, 800);
-        }
-        if (timer >= randn6)
-        {
-            Instantiate(car, loc6);
-            randn6 = randn6 + Random.Range(200, 800);
-        }
-        if (timer >= randn7)
-        {
-            Instantiate(car, loc7);
-            randn7 = randn7 + Random.Range(100, 800);
-        }
-        if (timer >= randn8)
-        {
-            Instantiate(car, loc8);
-            randn8 = randn8 + Random.Range(100, 800);
-        }
+        // timer++;
+        // if (timer >= randn1)
+        // {
+        // Instantiate(car, loc1);
+        //     randn1 = randn1 + Random.Range(200, 1000);
+        // }
+        // if (timer >= randn2)
+        // {
+        //     Instantiate(car, loc2);
+        //     randn2 = randn2 + Random.Range(200, 1000);
+        // }
+        // if (timer >= randn3)
+        // {
+        //     Instantiate(car, loc3);
+        //     randn3 = randn3 + Random.Range(200, 900);
+        // }
+        // if (timer >= randn4)
+        // {
+        //     Instantiate(car, loc4);
+        //     randn4 = randn4 + Random.Range(200, 900);
+        // }
+        // if (timer >= randn5)
+        // {
+        //     Instantiate(car, loc5);
+        //     randn5 = randn5 + Random.Range(200, 800);
+        // }
+        // if (timer >= randn6)
+        // {
+        //     Instantiate(car, loc6);
+        //     randn6 = randn6 + Random.Range(200, 800);
+        // }
+        // if (timer >= randn7)
+        // {
+        //     Instantiate(car, loc7);
+        //     randn7 = randn7 + Random.Range(100, 800);
+        // }
+        // if (timer >= randn8)
+        // {
+        //     Instantiate(car, loc8);
+        //     randn8 = randn8 + Random.Range(100, 800);
+        // }
 
     }
 }

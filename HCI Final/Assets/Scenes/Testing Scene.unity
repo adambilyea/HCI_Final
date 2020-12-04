@@ -648,6 +648,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   input: {fileID: 1471700394}
   Researcher: {fileID: 154218363}
+  car: {fileID: 2351991089878818295, guid: 9b7148b72b29c0f45850611d324dd139, type: 3}
+  loc1: {fileID: 2080795706}
+  loc2: {fileID: 674104854}
+  loc3: {fileID: 70419901}
+  loc4: {fileID: 1388647182}
+  loc5: {fileID: 873920364}
+  loc6: {fileID: 2051234410}
+  loc7: {fileID: 889223004}
+  loc8: {fileID: 1656637967}
   field: {fileID: 658931683}
 --- !u!4 &169549832
 Transform:
@@ -2015,8 +2024,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1319875908}
   m_HandleRect: {fileID: 1319875907}
   m_Direction: 0
-  m_Value: 0
-  m_Size: 1
+  m_Value: 1
+  m_Size: 0.99999994
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -6781,8 +6790,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 257897567}
   m_HandleRect: {fileID: 257897566}
   m_Direction: 2
-  m_Value: 1
-  m_Size: 0.37359935
+  m_Value: 0.9999999
+  m_Size: 0.3735993
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
