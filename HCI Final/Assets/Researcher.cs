@@ -7,7 +7,7 @@ using Photon.Pun;
 public class Researcher : MonoBehaviour
 {
     public float speed = 1.0f;
-    private float carSpeed = 20f;
+    public float carSpeed = 20f;
     public string myName = "Test";
 
     private PhotonView myPV;
@@ -18,6 +18,7 @@ public class Researcher : MonoBehaviour
 
     private Text input;
     private Text carSpeedInput;
+
 
     private bool playerJoined = false;
     // Start is called before the first frame update

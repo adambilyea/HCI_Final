@@ -132,4 +132,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  carSpeed: 20
   myName: Test

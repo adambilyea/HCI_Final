@@ -11,19 +11,11 @@ public class GameSetup : MonoBehaviour
     public Text carSpeedInput;
     public Canvas Researcher;
 
-    //Car Variables
-    public GameObject car;
-    public Transform loc1;
-    public Transform loc2;
-    public Transform loc3;
-    public Transform loc4;
-    public Transform loc5;
-    public Transform loc6;
-    public Transform loc7;
-    public Transform loc8;
-
-
     public InputField field;
+
+    private bool playerJoined = false;
+
+
     // Start is called before the first frame update
     void Start()
     {

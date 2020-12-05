@@ -649,16 +649,8 @@ MonoBehaviour:
   input: {fileID: 1471700394}
   carSpeedInput: {fileID: 990933832}
   Researcher: {fileID: 154218363}
-  car: {fileID: 2351991089878818295, guid: 9b7148b72b29c0f45850611d324dd139, type: 3}
-  loc1: {fileID: 2080795706}
-  loc2: {fileID: 674104854}
-  loc3: {fileID: 70419901}
-  loc4: {fileID: 1388647182}
-  loc5: {fileID: 873920364}
-  loc6: {fileID: 2051234410}
-  loc7: {fileID: 889223004}
-  loc8: {fileID: 1656637967}
   field: {fileID: 658931683}
+  move: {fileID: 0}
 --- !u!4 &169549832
 Transform:
   m_ObjectHideFlags: 0
@@ -2025,8 +2017,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1319875908}
   m_HandleRect: {fileID: 1319875907}
   m_Direction: 0
-  m_Value: 1
-  m_Size: 1
+  m_Value: 0
+  m_Size: 0.99999994
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -6245,6 +6237,36 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -0.0000072013}
   m_SizeDelta: {x: 0, y: 499.76715}
   m_Pivot: {x: 0, y: 1}
+--- !u!1 &1928357707
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1928357708}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1928357708
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1928357707}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 413.65552, y: 224.97601, z: -161.84744}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1928401549
 GameObject:
   m_ObjectHideFlags: 0
@@ -6791,7 +6813,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 257897567}
   m_HandleRect: {fileID: 257897566}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0.9999999
   m_Size: 0.37359932
   m_NumberOfSteps: 0
   m_OnValueChanged:
