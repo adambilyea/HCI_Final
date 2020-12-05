@@ -62,6 +62,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Shadow
     - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
+    - UnityEngine.UI.Toggle
   sceneClasses:
     Assets/Scenes/Menu Scene.unity:
     - Class: 1
@@ -269,6 +270,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 14220}
     - Class: 114
       Script: {instanceID: 14312}
+    - Class: 114
+      Script: {instanceID: 14330}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -780,7 +783,7 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAsset
   - hash:
       serializedVersion: 2
-      Hash: 09ab99cc8428027cf0df73f0ea520864
+      Hash: b6dda94d68755554b068a20256daf743
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameSetup
@@ -1350,7 +1353,7 @@ ScriptsOnlyBuild:
     className: OnPointerOverTooltip
   - hash:
       serializedVersion: 2
-      Hash: b8a2acbdaa612dc86df8970c0ef3e3ad
+      Hash: 7a8277ed8db807e06d2e030eb74bb98b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Researcher
@@ -1640,4 +1643,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/Menu Scene.unity
   - Assets/Scenes/Testing Scene.unity
-  playerPath: C:/Users/eashv/Desktop/Build/HCI Final.exe
+  playerPath: D:/rcace/UOIT/HCI_Final - Build/HCI Final.exe

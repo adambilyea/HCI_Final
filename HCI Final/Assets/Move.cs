@@ -19,14 +19,7 @@ public class Move : MonoBehaviour
 
     private car car;
     public float carSpeed;
-    private int randn1;
-    private int randn2;
-    private int randn3;
-    private int randn4;
-    private int randn5;
-    private int randn6;
-    private int randn7;
-    private int randn8;
+    private bool pausegame;
 
     private float timer = 0;
 
@@ -39,11 +32,12 @@ public class Move : MonoBehaviour
         tester = this.gameObject;
         game = FindObjectOfType<GameSetup>();
         car = FindObjectOfType<car>();
-        variables = new object[3];
+        variables = new object[4];
     
         variables[0] = 0;
         variables[1] = "Test";
         variables[2] = 0.0f;
+        variables[3] = false;
 
         if (QuickStartRoomController.option == 1)
         {
@@ -59,14 +53,6 @@ public class Move : MonoBehaviour
         player = this.gameObject;
         myPV = GetComponent<PhotonView>();
 
-        randn1 = Random.Range(200, 1000);
-        randn2 = Random.Range(200, 1000);
-        randn3 = Random.Range(200, 900);
-        randn4 = Random.Range(200, 900);
-        randn5 = Random.Range(200, 800);
-        randn6 = Random.Range(200, 800);
-        randn7 = Random.Range(100, 800);
-        randn8 = Random.Range(100, 800);
     }
 
     
@@ -80,7 +66,8 @@ public class Move : MonoBehaviour
     {
         speed = (float)(float) newVariables[0];
         myName = (string)(string) newVariables[1];
-        carSpeed = (float)(float) newVariables[2];  
+        carSpeed = (float)(float) newVariables[2];
+        pausegame = (bool)(bool)newVariables[3];
     }
 
 
@@ -90,7 +77,15 @@ public class Move : MonoBehaviour
         {
             movePos();
         }
-        
+
+        //if(pausegame == true)
+        //{
+        //    Time.timeScale = 0;
+        //}
+        //else
+        //{
+        //    Time.timeScale = 1;
+        //}
     }
 
     void movePos()
@@ -124,4 +119,6 @@ public class Move : MonoBehaviour
             gameObject.transform.SetPositionAndRotation(new Vector3(0, 0, 0), Quaternion.identity);
         }
     }
+
+
 }

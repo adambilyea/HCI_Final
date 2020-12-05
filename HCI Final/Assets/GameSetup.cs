@@ -4,14 +4,16 @@ using UnityEngine;
 using System.IO;
 using Photon.Pun;
 using UnityEngine.UI;
+using TMPro;
 
 public class GameSetup : MonoBehaviour
 {
     public Text input;
     public Text carSpeedInput;
     public Canvas Researcher;
-
+    public Toggle checkbox;
     public InputField field;
+    public TMP_Text notes;
 
     private bool playerJoined = false;
 
@@ -36,4 +38,26 @@ public class GameSetup : MonoBehaviour
             Researcher.enabled = false;
         }
     }
+
+    public void saveNotes()
+    {
+
+    }
+
+  
+    public void WriteString()
+    {
+        string path = "Assets/Resources/test.txt";
+
+        //Write some text to the test.txt file
+        StreamWriter writer = new StreamWriter(path, false);
+        writer.WriteLine("PlayerSpeed: "+ input.text.ToString());
+        writer.WriteLine("CarSpeed: " + carSpeedInput.text.ToString() + "\n");
+        writer.WriteLine("Notes: \n" + notes.text.ToString());
+
+        writer.Close();
+
+        //Print the text from the file
+    }
+
 }

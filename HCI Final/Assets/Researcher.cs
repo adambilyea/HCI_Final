@@ -9,7 +9,7 @@ public class Researcher : MonoBehaviour
     public float speed = 1.0f;
     public float carSpeed = 20f;
     public string myName = "Test";
-
+    public bool pausegame = false;
     private PhotonView myPV;
     private object[] variables;
 
@@ -18,6 +18,7 @@ public class Researcher : MonoBehaviour
 
     private Text input;
     private Text carSpeedInput;
+    private Toggle checkbox;
 
 
     private bool playerJoined = false;
@@ -29,11 +30,12 @@ public class Researcher : MonoBehaviour
         game = FindObjectOfType<GameSetup>();
         input = game.input;
         carSpeedInput = game.carSpeedInput;
-
-        variables = new object[3];
+        checkbox = game.checkbox;
+        variables = new object[4];
         variables[0] = 0;
         variables[1] = "Researcher";
         variables[2] = carSpeed;
+        variables[3] = pausegame;
     }
     [PunRPC] void SetVariables(object[] newVariables)
     {   
@@ -55,12 +57,14 @@ public class Researcher : MonoBehaviour
             //Debug.Log(float.Parse(input.text));
             speed = float.Parse(input.text);
             carSpeed = float.Parse(carSpeedInput.text);
+            pausegame = checkbox.isOn;
             //speed = 10f;
             myName = "Adam";
 
             variables[0] = speed;
             variables[1] = myName;
             variables[2] = carSpeed;
+            variables[3] = pausegame;
             
             myPV.RPC("SetVariables", RpcTarget.OthersBuffered, variables);
             Debug.Log("values sent");

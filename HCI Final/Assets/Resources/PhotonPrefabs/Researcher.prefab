@@ -134,3 +134,4 @@ MonoBehaviour:
   speed: 1
   carSpeed: 20
   myName: Test
+  pausegame: 0
