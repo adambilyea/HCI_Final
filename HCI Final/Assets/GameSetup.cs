@@ -12,6 +12,7 @@ public class GameSetup : MonoBehaviour
     public Text carSpeedInput;
     public Canvas Researcher;
     public Toggle checkbox;
+    public Text randomness;
     public InputField field;
     public TMP_Text notes;
 

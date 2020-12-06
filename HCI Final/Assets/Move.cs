@@ -20,6 +20,7 @@ public class Move : MonoBehaviour
     private car car;
     public float carSpeed;
     private bool pausegame;
+    public float randomness;
 
     private float timer = 0;
 
@@ -32,12 +33,13 @@ public class Move : MonoBehaviour
         tester = this.gameObject;
         game = FindObjectOfType<GameSetup>();
         car = FindObjectOfType<car>();
-        variables = new object[4];
+        variables = new object[5];
     
         variables[0] = 0;
         variables[1] = "Test";
         variables[2] = 0.0f;
         variables[3] = false;
+        variables[4] = 0;
 
         if (QuickStartRoomController.option == 1)
         {
@@ -68,6 +70,7 @@ public class Move : MonoBehaviour
         myName = (string)(string) newVariables[1];
         carSpeed = (float)(float) newVariables[2];
         pausegame = (bool)(bool)newVariables[3];
+        randomness = (float)(float)newVariables[4];
     }
 
 
